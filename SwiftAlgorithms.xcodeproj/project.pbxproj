@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		42BE180120D4A89300D73AA2 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE180020D4A89300D73AA2 /* Template.swift */; };
 		42CBC38120D4A52800E5916A /* _01_Two_Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CBC38020D4A52800E5916A /* _01_Two_Sum.swift */; };
-		4313923091A566E137C67A59 /* StrStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431394D471C2B26A5A8E3DB0 /* StrStr.swift */; };
 		431399032B7DBD65C8D5E292 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431390B1009B8A62FFBB1883 /* Basics.swift */; };
+		431399DA1AC4CA1C591091E6 /* StrStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43139D4A0FB81BFB96EDDF0B /* StrStr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +19,7 @@
 		42CBC38020D4A52800E5916A /* _01_Two_Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _01_Two_Sum.swift; sourceTree = "<group>"; };
 		42CBC38220D4A52800E5916A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431390B1009B8A62FFBB1883 /* Basics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
-		431394D471C2B26A5A8E3DB0 /* StrStr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrStr.swift; sourceTree = "<group>"; };
+		43139D4A0FB81BFB96EDDF0B /* StrStr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrStr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +38,7 @@
 			children = (
 				42CBC37F20D4A52800E5916A /* AlgorithmsUnitTests */,
 				42CBC37E20D4A52800E5916A /* Products */,
+				43139B5317D207AAC76B994D /* jiuzhang */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,25 +57,24 @@
 				42CBC38220D4A52800E5916A /* Info.plist */,
 				42BE180020D4A89300D73AA2 /* Template.swift */,
 				431390B1009B8A62FFBB1883 /* Basics.swift */,
-				43139E9ED3A5494CD284F4A0 /* jiuzhang */,
 			);
 			path = AlgorithmsUnitTests;
 			sourceTree = "<group>";
 		};
-		431394B54C5FDBD8BD3E60AD /* chapter01_string_array */ = {
+		43139B5317D207AAC76B994D /* jiuzhang */ = {
 			isa = PBXGroup;
 			children = (
-				431394D471C2B26A5A8E3DB0 /* StrStr.swift */,
-			);
-			path = chapter01_string_array;
-			sourceTree = "<group>";
-		};
-		43139E9ED3A5494CD284F4A0 /* jiuzhang */ = {
-			isa = PBXGroup;
-			children = (
-				431394B54C5FDBD8BD3E60AD /* chapter01_string_array */,
+				43139D7D0FF2CE7C63859E9E /* chapter01_string_array */,
 			);
 			path = jiuzhang;
+			sourceTree = "<group>";
+		};
+		43139D7D0FF2CE7C63859E9E /* chapter01_string_array */ = {
+			isa = PBXGroup;
+			children = (
+				43139D4A0FB81BFB96EDDF0B /* StrStr.swift */,
+			);
+			path = chapter01_string_array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +146,7 @@
 				42CBC38120D4A52800E5916A /* _01_Two_Sum.swift in Sources */,
 				42BE180120D4A89300D73AA2 /* Template.swift in Sources */,
 				431399032B7DBD65C8D5E292 /* Basics.swift in Sources */,
-				4313923091A566E137C67A59 /* StrStr.swift in Sources */,
+				431399DA1AC4CA1C591091E6 /* StrStr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
