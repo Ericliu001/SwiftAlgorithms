@@ -11,6 +11,7 @@
 		42CBC38120D4A52800E5916A /* _01_Two_Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CBC38020D4A52800E5916A /* _01_Two_Sum.swift */; };
 		431399032B7DBD65C8D5E292 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431390B1009B8A62FFBB1883 /* Basics.swift */; };
 		431399DA1AC4CA1C591091E6 /* StrStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43139D4A0FB81BFB96EDDF0B /* StrStr.swift */; };
+		43139BE5DF10A46FA4D71FF7 /* FindPeakElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431395E75C6662C4C2C9573C /* FindPeakElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		42CBC38020D4A52800E5916A /* _01_Two_Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _01_Two_Sum.swift; sourceTree = "<group>"; };
 		42CBC38220D4A52800E5916A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431390B1009B8A62FFBB1883 /* Basics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
+		431395E75C6662C4C2C9573C /* FindPeakElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPeakElement.swift; sourceTree = "<group>"; };
 		43139D4A0FB81BFB96EDDF0B /* StrStr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrStr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				43139D7D0FF2CE7C63859E9E /* chapter01_string_array */,
+				43139E82B8C51AEC9D692B53 /* chapter02_binary_search */,
 			);
 			path = jiuzhang;
 			sourceTree = "<group>";
@@ -75,6 +78,14 @@
 				43139D4A0FB81BFB96EDDF0B /* StrStr.swift */,
 			);
 			path = chapter01_string_array;
+			sourceTree = "<group>";
+		};
+		43139E82B8C51AEC9D692B53 /* chapter02_binary_search */ = {
+			isa = PBXGroup;
+			children = (
+				431395E75C6662C4C2C9573C /* FindPeakElement.swift */,
+			);
+			path = chapter02_binary_search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				42BE180120D4A89300D73AA2 /* Template.swift in Sources */,
 				431399032B7DBD65C8D5E292 /* Basics.swift in Sources */,
 				431399DA1AC4CA1C591091E6 /* StrStr.swift in Sources */,
+				43139BE5DF10A46FA4D71FF7 /* FindPeakElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

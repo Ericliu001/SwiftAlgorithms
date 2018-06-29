@@ -26,7 +26,7 @@ import Foundation
 */
 
 
-class Solution {
+class Solution028 {
     func strStr(_ haystack: String, _ needle: String) -> Int {
         guard needle.count > 0 else {
             return 0
@@ -60,12 +60,12 @@ class Solution {
 
 import XCTest
 
-class Test: XCTestCase {
+class Test028: XCTestCase {
 
     func test01() {
         let hayStack = "a"
         let needle = "a"
-        let index = Solution().strStr(hayStack, needle)
+        let index = Solution028().strStr(hayStack, needle)
 
         assert(index == 0)
     }
@@ -73,7 +73,7 @@ class Test: XCTestCase {
     func test02() {
         let hayStack = "hello"
         let needle = "ll"
-        let index = Solution().strStr(hayStack, needle)
+        let index = Solution028().strStr(hayStack, needle)
 
         assert(index == 2)
     }
@@ -81,7 +81,7 @@ class Test: XCTestCase {
     func test03() {
         let hayStack = "aaaaaa"
         let needle = "ba"
-        let index = Solution().strStr(hayStack, needle)
+        let index = Solution028().strStr(hayStack, needle)
 
         assert(index == -1)
     }
@@ -90,7 +90,7 @@ class Test: XCTestCase {
     func test04() {
         let hayStack = ""
         let needle = "a"
-        let index = Solution().strStr(hayStack, needle)
+        let index = Solution028().strStr(hayStack, needle)
 
         assert(index == -1)
     }
