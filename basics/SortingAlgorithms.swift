@@ -17,20 +17,74 @@ class SortingAlgorithms {
             }
         }
     }
+
+
+    func quickSort(_ nums: inout [Int], start: Int, end: Int) {
+        guard start < end else {
+            return
+        }
+
+        var low = start
+        var high = end
+
+        let pivotValue = nums[(start + end) / 2]
+
+        while low <= high {
+            while nums[low] < pivotValue {
+                low += 1
+            }
+
+            while pivotValue < nums[high] {
+                high -= 1
+            }
+
+            if low <= high {
+                nums.swapAt(low, high)
+                low += 1
+                high -= 1
+            }
+        }
+
+        quickSort(&nums, start: start, end: high)
+        quickSort(&nums, start: low, end: end)
+    }
 }
 
 
 import XCTest
 
 class TestSorting: XCTestCase {
-    func testInsertionSort() {
-        var nums = [1, 2, 3, 1, 4]
-        SortingAlgorithms().insertionSort(&nums)
 
-        let expected = [1, 1, 2, 3, 4]
+    var nums = [Int]()
+
+    override func setUp() {
+        let size = 30
+        nums = (0..<size).map{ _ -> Int in Int(arc4random_uniform(UInt32(size)))}
+    }
+
+
+
+    func testInsertionSort() {
+        print("\nInsertion Sort:")
+        print(nums)
+
+        SortingAlgorithms().insertionSort(&nums)
+        let expected = nums.sorted()
+        assert(expected == nums)
 
         print(nums)
+    }
+
+    func testQuickSort() {
+        print("\nQuick Sort:")
+        print(nums)
+
+        SortingAlgorithms().quickSort(&nums, start: 0, end: nums.count - 1)
+
+        let expected = nums.sorted()
+
         assert(expected == nums)
+        print(nums)
     }
 
 }
