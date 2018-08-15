@@ -20,7 +20,7 @@ class SortingAlgorithms {
 
 
     func quickSort(_ nums: inout [Int], start: Int, end: Int) {
-        guard start <= end else {
+        guard start < end else {
             return
         }
 
