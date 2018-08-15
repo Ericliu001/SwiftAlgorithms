@@ -20,7 +20,7 @@ class SortingAlgorithms {
 
 
     func quickSort(_ nums: inout [Int], start: Int, end: Int) {
-        guard start < end else {
+        guard start <= end else {
             return
         }
 
@@ -85,6 +85,17 @@ class TestSorting: XCTestCase {
 
         assert(expected == nums)
         print(nums)
+
+        var testArray1 = [1, 1]
+        SortingAlgorithms().quickSort(&testArray1, start: 0, end: testArray1.count - 1)
+        assert([1, 1] == testArray1)
+        print(testArray1)
+
+
+        var testArray2 = [1]
+        SortingAlgorithms().quickSort(&testArray2, start: 0, end: testArray2.count - 1)
+        assert([1] == testArray2)
+        print(testArray2)
     }
 
 }
