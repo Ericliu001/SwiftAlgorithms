@@ -48,6 +48,37 @@ class SortingAlgorithms {
         quickSort(&nums, start: start, end: high)
         quickSort(&nums, start: low, end: end)
     }
+
+
+    func mergeSort(_ nums: inout [Int]) {
+        var dup = nums.map { i -> Int in
+            i
+        }
+        mergeSort(src: &dup, dest: &nums, start: 0, end: nums.count - 1)
+    }
+
+    private func mergeSort(src: inout [Int], dest: inout [Int], start: Int, end: Int) {
+        guard start < end else {
+            return
+        }
+
+
+        let mid = start + (end - start) / 2
+        mergeSort(src: &dest, dest: &src, start: start, end: mid)
+        mergeSort(src: &dest, dest: &src, start: mid + 1, end: end)
+
+        var right = mid + 1
+        var left = start
+        for i in start...end {
+            if (right > end) || (left <= mid && src[left] < src[right]) {
+                dest[i] = src[left]
+                left += 1
+            } else {
+                dest[i] = src[right]
+                right += 1
+            }
+        }
+    }
 }
 
 
@@ -59,9 +90,10 @@ class TestSorting: XCTestCase {
 
     override func setUp() {
         let size = 30
-        nums = (0..<size).map{ _ -> Int in Int(arc4random_uniform(UInt32(size)))}
+        nums = (0..<size).map { _ -> Int in
+            Int(arc4random_uniform(UInt32(size)))
+        }
     }
-
 
 
     func testInsertionSort() {
@@ -98,6 +130,16 @@ class TestSorting: XCTestCase {
         print(testArray2)
     }
 
+    func testMergeSort() {
+        print("\nMerge Sort:")
+        print(nums)
+
+        SortingAlgorithms().mergeSort(&nums)
+
+        let expected = nums.sorted()
+        print(nums)
+        assert(expected == nums)
+    }
 }
 
 
