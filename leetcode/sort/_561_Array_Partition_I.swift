@@ -10,12 +10,8 @@ class _561_Array_Partition_I {
         let sortedArray = nums.sorted()
         var sum = 0
 
-        for i in stride(from: 0, through: nums.count - 1, by: 2) {
-            if i < nums.count - 1 {
-                sum += min(sortedArray[i], sortedArray[i + 1])
-            } else {
-                sum += sortedArray[i]
-            }
+        for i in stride(from: 0, to: nums.count - 1, by: 2) {
+            sum += min(sortedArray[i], sortedArray[i + 1])
         }
         return sum
     }
@@ -24,6 +20,7 @@ class _561_Array_Partition_I {
 
 
 import XCTest
+
 class Test561: XCTestCase {
 
     func test01() {
@@ -32,7 +29,6 @@ class Test561: XCTestCase {
 
         assert(4 == result)
     }
-
 
 
     func test02() {
