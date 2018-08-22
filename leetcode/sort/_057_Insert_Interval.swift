@@ -11,41 +11,56 @@
 //
 //class _057_Insert_Interval {
 //    func insert(_ intervals: [Interval], _ newInterval: Interval) -> [Interval] {
-//        let lowerBound: (Int, Int) = binarySearch(intervals: intervals, target: newInterval.start)
-//        let upperBound: (Int, Int) = binarySearch(intervals: intervals, target: newInterval.end)
-//
+//        guard !intervals.isEmpty else {
+//            return [newInterval]
+//        }
 //
 //        var replaceInterval = Interval(0, 0)
 //        var replaceStartIndex = 0
 //        var replaceEndIndex = 0
 //
-//        if lowerBound.0 % 2 == 0 {
-//            // between [a, b]
-//            replaceInterval.start = intervals[lowerBound.0 / 2].start
-//            replaceStartIndex = lowerBound.0 / 2
-//        } else if intervals[lowerBound.0 / 2].end < newInterval.start {
-//            //between ...a], [b...
+//        if newInterval.start <= intervals.first!.start {
 //            replaceInterval.start = newInterval.start
-//            replaceStartIndex = lowerBound.1 / 2 + 1
+//            replaceStartIndex = 0
 //        } else {
-//            // ...b] == newInterval.start
-//            replaceInterval.start = intervals[lowerBound.0 / 2].start
-//            replaceStartIndex = lowerBound.0 / 2
+//            let lowerBound: (Int, Int) = binarySearch(intervals: intervals, target: newInterval.start)
+//            if lowerBound.0 % 2 == 0 {
+//                // between [a, b]
+//                replaceInterval.start = intervals[lowerBound.0 / 2].start
+//                replaceStartIndex = lowerBound.0 / 2
+//            } else {
+//                if intervals[lowerBound.0 / 2].end == newInterval.start {
+//                    // ...b] == newInterval.start
+//                    replaceInterval.start = intervals[lowerBound.0 / 2].start
+//                    replaceStartIndex = lowerBound.0 / 2
+//                }
+//                //between ...a], [b...
+//                replaceInterval.start = newInterval.start
+//                replaceStartIndex = lowerBound.1 / 2 + 1
+//            }
 //        }
 //
-//        if upperBound.1 % 2 == 1 {
-//            // between [a, b]
-//            replaceInterval.end = intervals[upperBound.1 / 2].end
-//            replaceStartIndex = upperBound.1 / 2
-//        } else if newInterval.end < intervals[upperBound.1 / 2].start {
-//            // between ...a], [b...
+//        if newInterval.end >= intervals.last!.end {
 //            replaceInterval.end = newInterval.end
-//            replaceEndIndex = upperBound.1 / 2 - 1
+//            replaceEndIndex = intervals.count - 1
 //        } else {
-//            // newInterval.end == [b ...
-//            replaceInterval.end = intervals[upperBound.1 / 2].end
-//            replaceEndIndex = upperBound.1 / 2
+//            let upperBound: (Int, Int) = binarySearch(intervals: intervals, target: newInterval.end)
+//            if upperBound.1 % 2 == 1 {
+//                // between [a, b]
+//                replaceInterval.end = intervals[upperBound.1 / 2].end
+//                replaceEndIndex = upperBound.1 / 2
+//            } else {
+//                if newInterval.end == intervals[upperBound.1 / 2].start {
+//                    // newInterval.end == [b ...
+//                    replaceInterval.end = intervals[upperBound.1 / 2].end
+//                    replaceEndIndex = upperBound.1 / 2
+//                }
+//                // between ...a], [b...
+//                replaceInterval.end = newInterval.end
+//                replaceEndIndex = upperBound.1 / 2 - 1
+//            }
 //        }
+//
 //
 //        var result = intervals
 //        result.removeSubrange(replaceStartIndex...replaceEndIndex)
