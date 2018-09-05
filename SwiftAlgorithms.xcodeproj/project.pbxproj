@@ -16,6 +16,7 @@
 		431397C51002307FE56CE28B /* SortingAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431396F8C6B7B9281550B99D /* SortingAlgorithms.swift */; };
 		431399032B7DBD65C8D5E292 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431390B1009B8A62FFBB1883 /* Basics.swift */; };
 		431399488C10F05D60BBD5EC /* _057_Insert_Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313955682F67E9AF5C9F678 /* _057_Insert_Interval.swift */; };
+		4313997E9EE7D6953D825CB6 /* Shadows-of-the-knight-episode-1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43139F159CDF0D25A91657F6 /* Shadows-of-the-knight-episode-1.swift */; };
 		431399DA1AC4CA1C591091E6 /* StrStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43139D4A0FB81BFB96EDDF0B /* StrStr.swift */; };
 		43139A4ED3860091E7051C16 /* _217_ContainsDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4313966CCE0F45D1A8BB0337 /* _217_ContainsDuplicate.swift */; };
 		43139BE5DF10A46FA4D71FF7 /* FindPeakElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431395E75C6662C4C2C9573C /* FindPeakElement.swift */; };
@@ -39,6 +40,7 @@
 		4313998EEA2B40F0D90E3886 /* _056_Merge Intervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "_056_Merge Intervals.swift"; sourceTree = "<group>"; };
 		43139B1E4CF439518FB04E25 /* _561_Array_Partition_I.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _561_Array_Partition_I.swift; sourceTree = "<group>"; };
 		43139D4A0FB81BFB96EDDF0B /* StrStr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrStr.swift; sourceTree = "<group>"; };
+		43139F159CDF0D25A91657F6 /* Shadows-of-the-knight-episode-1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Shadows-of-the-knight-episode-1.swift"; sourceTree = "<group>"; };
 		43139FF3BE0EAF4D7EDCE013 /* Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				43139B5317D207AAC76B994D /* jiuzhang */,
 				43139B5F7E756D06444A35EA /* leetcode */,
 				4313900F95B80AE25ACA5A5F /* basics */,
+				43139EF6685F491AC73C69EA /* codinggame */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +158,14 @@
 			path = chapter02_binary_search;
 			sourceTree = "<group>";
 		};
+		43139EF6685F491AC73C69EA /* codinggame */ = {
+			isa = PBXGroup;
+			children = (
+				43139F159CDF0D25A91657F6 /* Shadows-of-the-knight-episode-1.swift */,
+			);
+			path = codinggame;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -235,6 +246,7 @@
 				43139CF75800D591B9C5E889 /* _056_Merge Intervals.swift in Sources */,
 				43139C2D74BBAC3A8A82CE5C /* _088_Merge_Sorted_Array.swift in Sources */,
 				43139263B87DBE7DE5A6B975 /* _075_Sort_Colors.swift in Sources */,
+				4313997E9EE7D6953D825CB6 /* Shadows-of-the-knight-episode-1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
